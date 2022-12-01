@@ -6,12 +6,11 @@
 1. Os testes automatizados de fato utilizam as melhores técnicas de modo a potencializar a revelação de bugs e, consequentemente, aumentar o nível de confiabilidade do código.
 1. O código demonstra que práticas de refatoração são executadas regularmente. 
 1. Nível de saúde quando olhamos para as métricas que servem de proxy para a qualidade do código como LOC, Coesão, Acoplamento entre outras.
-7. Quando olhamos para as métricas que servem de proxy para a qualidade do código como LOC, Coesão, Acoplamento entre outras, o que elas nos dizem?
-8. Nível de facilidade de entendimento
-9. Nível de preocupação do código com performance,escalabilidade e resiliência
-10. Qualidade da documentação
-11. O código demonstra a preocupação necessária com privacidade de dados.
-12. Nível de aplicação de práticas de segurança como cidadã de primeiro nível(Security by design)
+1. Nível de facilidade de entendimento
+1. Nível de preocupação do código com performance,escalabilidade e resiliência
+1. Qualidade da documentação
+1. O código demonstra a preocupação necessária com privacidade de dados.
+1. Nível de aplicação de práticas de segurança como cidadã de primeiro nível(Security by design)
 
 ## Possíveis evidências
 
