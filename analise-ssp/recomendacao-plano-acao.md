@@ -51,17 +51,76 @@ Aqui usamos um escala de 1 a 5. 1 significa extrema pobreza no uso das práticas
 
 ## Plano de ação para melhorar o nível técnico da equipe
 
-O plano de ação tenta priorizar o que parece ser a maior dor para que a equipe consiga produzir um código bom o suficiente para sustentar o produto da melhor maneira possível. Em primeiro lugar vamos ordenar o que entendemos ser necessário.
+### Priorização dos pontos que precisam ser trabalhados
 
-1. A equipe precisa dominar mais os recursos mais básicos da linguagem Java, Spring e Hibernate. O básico bem treinado deve fazer com que o time entregue tudo com muito mais qualidade. **Java**: Aqui estamos falando de uso mais racional das abstrações disponíveis na própria linguagem como as coleções, tipo opcional e interfaces funcionais. **Spring**: Aqui a ideia é usar melhor os mecanismos de validação de entrada de dados, controle de exceptions, integrações com libs que facilitam o trabalho como o Feign. **Hibernate**: Aqui é praticar muito o controle do estado do objeto gerenciado pelo hibernate e ter total clareza do que está lidando. 
+O plano de ação tenta priorizar o que parece ser a maior dor para que a equipe consiga produzir um código bom o suficiente para sustentar o produto da melhor maneira possível. 
 
-2. Em segundo lugar o código apresenta práticas muito pobres de design. Aqui é necessário muita prática em cima da combinação clássica: Alta coesão e baixo aclopamento. Provavelmente a equipe carece de heurísticas mais refinadas para decidir onde os códigos vão viver. Também parece importante exercitar muito a prática de programação defensiva. Um meio de custo baixo e de impacto interessante quando falamos em aumentar a confiabilidade de execução. Para fechar é necessário praticar muita refatoração. Aparentemente essa não é uma prática regular na equipe. 
+Trabalhamos com um tripé que consideramos essencial para maximizar a chance de elevação de régua de conhecimento e de capacidade de utilização de tal conhecimento nos cenários desejados.
 
-3. Ainda sobre aspectos básicos de qualidade. Os testes não cumprem o papel que deveriam. A falta de asserts e de cobertura considerando as branches do código não ajuda nem na confiança para refatorar e testar o código pós correções de bugs e evoluções assim como não ajuda a revelar problemas o mais cedo possível. 
+1. Quando for necessário, trabalhar a teoria para que as pessoas saibam o que é necessário fazer. 
+2. Exagerar na prática, fazendo de maneira progressiva, para que as pessoas possam exercitar em cenários cada vez mais próximos da realidade. Aqui não consideramos apenas complexidade técnica, mas todos os fatores que são esperados daquela equipe. Nossa inspiração aqui vem do esporte, que atualmente, junto com as profissões de risco, possui o sistema de treino mais efetivo do planeta. 
+3. Máximo de feedback sobre a aprendizagem. É muito fácil consumir algo, praticar e já achar que está no caminho certo. A avaliação recorrente sobre o que está sendo aprendido serve de GPS aumentando as chances de irmos pelo caminho correto. 
 
-4. Quando olhamos para privacidade parece que não existe qualquer ideia de como implementar os comportamentos esperados a nível de código. Aqui a ideia é partir do básico para, inicialmente, gerar consciência sobre o assunto. 
+Agora para os itens que entendemos que necessitam de melhora. 
 
-5. Os pontos de integração do sistema não demonstram qualquer preocupação com resiliência. Não existe uma sistematização para lidar com estouros de tempo, problemas de conexão, retornos como erro etc. Este é um ponto onde o sistema está operando basicamente na sorte. Aqui parece necessário tanto um apuro teórico quanto muita prática para que essa preocupação seja padronizada. 
+## Dominar os recursos básicos da Stack de tecnologia. 
+
+A equipe precisa dominar mais os recursos mais básicos da linguagem Java, Spring e Hibernate. O básico bem treinado deve fazer com que o time entregue tudo com muito mais qualidade. **Java**: Aqui estamos falando de uso mais racional das abstrações disponíveis na própria linguagem como as coleções, tipo opcional e interfaces funcionais. **Spring**: Aqui a ideia é usar melhor os mecanismos de validação de entrada de dados, controle de exceptions, integrações com libs que facilitam o trabalho como o Feign. **Hibernate**: Aqui é praticar muito o controle do estado do objeto gerenciado pelo hibernate e ter total clareza do que está lidando. 
+
+### Plano de ação
+
+1. Realizar os treinamentos que temos prontos na nossa plataforma de ensino sobre os aspectos mapeados do Spring e Hibernate. 
+1. Como não temos treinamentos prontos sobre os recursos padrões da API do Java, podemos oferecer uma série de workshosp(3 ou mais) que conseguimos construir num prazo bem curto. Gostamos de usar 3 ou mais para que possamos trabalhar claramente uma progressão de dificuldade. 
+1. Também entendemos ser interessante uma outra série de workshops(3 ou mais) para praticarmos juntos todas as habilidades em conjunto. Aqui é mais uma oportunidade de avaliarmos o nível da equipe e também de trazer mais componentes como pressão, requisitos mal descritos etc. 
+
+### Melhoria nas práticas de design de código
+
+Em segundo lugar o código apresenta práticas muito pobres de design. Aqui é necessário muita prática em cima da combinação clássica: Alta coesão e baixo aclopamento. Provavelmente a equipe carece de heurísticas mais refinadas para decidir onde os códigos vão viver. Também parece importante exercitar muito a prática de programação defensiva. Um meio de custo baixo e de impacto interessante quando falamos em aumentar a confiabilidade de execução. Para fechar é necessário praticar muita refatoração. Aparentemente essa não é uma prática regular na equipe. 
+
+### Plano de ação
+
+1. Três ou mais sessões de workshop focadas em práticas relativas divisão de responsabilidades, coesão e programação defensiva. 
+1. Uma sessão extra de workshop para que possamos aprofundar a ideia de utilização de camadas para postegar decisões, se proteger de mudanças etc. Aqui entendemos que a equipe até sabe o que fazer, mas podemos ter trabalhar mais opções, principalmente utilização de interfaces para inverter dependências. 
+1. Três ou mais sessões de refatoração para que seja possível praticar isso em códigos bem diferentes
+
+## Aprofundamento em testes
+
+Ainda sobre aspectos básicos de qualidade. Os testes não cumprem o papel que deveriam. A falta de asserts e de cobertura considerando as branches do código não ajuda nem na confiança para refatorar e testar o código pós correções de bugs e evoluções assim como não ajuda a revelar problemas o mais cedo possível. 
+
+### Plano de ação
+
+1. Realizar os treinamentos na nossa plataforma sobre testes e também do módulo de testes do Spring. 
+1. Um workshop com a intenção de reforçar o feedack sobre o aprendizado relativo aos testes. 
+
+## Sobre privacidade
+
+Quando olhamos para privacidade parece que não existe qualquer ideia de como implementar os comportamentos esperados a nível de código. Aqui a ideia é partir do básico para, inicialmente, gerar consciência sobre o assunto. 
+
+### Plano de ação
+
+Aqui não parece fazer sentido já realizar uma imersão mais profunda para melhorar as habilidades práticas das pessoas. Nesse momento parece mais adequado algumas palestras sobre o tema para gerar este sentimento de alerta que isso é importante. Talvez valha a pena um workshop para realizarmos novas inspeções no código. 
+
+## Sobre resiliência
+
+Os pontos de integração do sistema não demonstram qualquer preocupação com resiliência. Não existe uma sistematização para lidar com estouros de tempo, problemas de conexão, retornos como erro etc. Este é um ponto onde o sistema está operando basicamente na sorte. Aqui parece necessário tanto um apuro teórico quanto muita prática para que essa preocupação seja padronizada. 
+
+### Plano de ação
+
+1. Três ou mais workshops focados exclusivamente em construir uma sistematização para trazer resiliência para as aplicações. O conceito de resiliência não é complicado, o problema é ter repertório para as múltiplas situações que podem aparecer. É isso que vamos atacar. 
+
+### Documentação como cidadã de primeiro nível. 
+
+O código carece demais de documentação. Este é um tema controverso e muitos times, até por conta de uma linha de argumentação de referências na comunidade, consideram que este não é um tema prioritário. Nós, por outro lado, entendemos que documentação pode ser um fator de aumento de produtividade muito interessante. A ideia é trabalhar quais tipos de documentação podem ser escritas e exercitar muito isso em cima da base de código que já existe. 
+
+### Plano de ação
+
+Aqui entendemos que pode ser válido uma palestra explorando uma variedade de formas de documentação que quando combinadas tendem a facilitar o entendimento do código para quem já trabalha no produto e para as novas pessoas que vão chegar. 
+
+## Oportunidades extras
+
+Além das ações de treinamento, também entendemos que existem oportunidade de investigação de pesquisa recorrentes dentro do contexto de times de engenharia. Temos um time especializado nisso e podemos realizar um trabalho de três meses trabalhando em cima de hipóteses para validar ou refutar cada uma delas. 
+
+Isso gera ainda mais visão crítica para a própria equipe facilitando futuras interevenções. 
 
 
 
