@@ -27,9 +27,7 @@ Aqui usamos um escala de 1 a 5. 1 significa extrema pobreza no uso das práticas
 8. Quando olhamos para as métricas que servem de proxy para a qualidade do código como LOC, Coesão, Acoplamento entre outras, qual o nível de saúde do código
     1. **Nota**: 1
     1. **Motivo**: Coesão baixa, acoplamento muito alto, número de linhas de código só na crescente 
-    1. **Análise complementar**: Rodei a análise de evolução de LOCs: Resultado aqui:
-
-[![Alt text](https://previews.dropbox.com/p/thumb/ABuv3LTYg4vvYgFq7pHqfZWysbauv1qQ9Ht1qp1XzA5-h5xsGDfBpWvcmxcyQHJbP6h3frUGV7FFllIlwm98eBC2yAVsjUEZCaBZKtiCVpbCBCoeSJDMuYBEm1lEt0XP4Nk3dPmCh4W7BNDrMfS45ReLCHSKV6_L391bZxxqs70Q54nIXL7EBzNJ9aW-RBVUaTdpdFZmnMciHZvC92HdP2QokbtreRZ_Nj_ZuJDgQAmV56jNeoBqw16fVobqm34abzalHSZxWoIWYl5tqbTZe9GaBVRIzKDAoiTh2HUm0xvRNNX7Iw-NN9RZWkLM2GGGlwt-sJoA9hTzYBxiH9zavyLTuAIOGHSbZgcna4-HSv7BJiJdarTyIjmtPqvN_p1U36M/p.png)](https://previews.dropbox.com/p/thumb/ABuv3LTYg4vvYgFq7pHqfZWysbauv1qQ9Ht1qp1XzA5-h5xsGDfBpWvcmxcyQHJbP6h3frUGV7FFllIlwm98eBC2yAVsjUEZCaBZKtiCVpbCBCoeSJDMuYBEm1lEt0XP4Nk3dPmCh4W7BNDrMfS45ReLCHSKV6_L391bZxxqs70Q54nIXL7EBzNJ9aW-RBVUaTdpdFZmnMciHZvC92HdP2QokbtreRZ_Nj_ZuJDgQAmV56jNeoBqw16fVobqm34abzalHSZxWoIWYl5tqbTZe9GaBVRIzKDAoiTh2HUm0xvRNNX7Iw-NN9RZWkLM2GGGlwt-sJoA9hTzYBxiH9zavyLTuAIOGHSbZgcna4-HSv7BJiJdarTyIjmtPqvN_p1U36M/p.png)
+    1. **Análise complementar**: Rodei a análise de evolução de LOCs: Resultado [aqui](https://previews.dropbox.com/p/thumb/ABuv3LTYg4vvYgFq7pHqfZWysbauv1qQ9Ht1qp1XzA5-h5xsGDfBpWvcmxcyQHJbP6h3frUGV7FFllIlwm98eBC2yAVsjUEZCaBZKtiCVpbCBCoeSJDMuYBEm1lEt0XP4Nk3dPmCh4W7BNDrMfS45ReLCHSKV6_L391bZxxqs70Q54nIXL7EBzNJ9aW-RBVUaTdpdFZmnMciHZvC92HdP2QokbtreRZ_Nj_ZuJDgQAmV56jNeoBqw16fVobqm34abzalHSZxWoIWYl5tqbTZe9GaBVRIzKDAoiTh2HUm0xvRNNX7Iw-NN9RZWkLM2GGGlwt-sJoA9hTzYBxiH9zavyLTuAIOGHSbZgcna4-HSv7BJiJdarTyIjmtPqvN_p1U36M/p.png).
 
 9. Considerando diversas combinações de itens derivadas do CDD, o quão fácil está de entender?
     1. **Nota**: 1
