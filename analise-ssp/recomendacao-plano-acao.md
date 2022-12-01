@@ -32,6 +32,7 @@ Aqui usamos um escala de 1 a 5. 1 significa extrema pobreza no uso das práticas
 9. Considerando diversas combinações de itens derivadas do CDD, o quão fácil está de entender?
     1. **Nota**: 1
     1. **Motivo**: O CDD é uma teoria de design que analisa, dado um determinado contexto, o quão fácil é de entender um código. Selecionamos algumas combinações de itens e em todos o código se mostra de dificil de entendimento.
+    1. **Análise complementar**: Rodei o plugin do CDD e há 176 classes (34%) acima do limite.
 
 10. Qual o nível de preocupação que o código dá sobre o mínimo de preocupação com performance,escalabilidade e resiliência
     1. **Nota**: 1
