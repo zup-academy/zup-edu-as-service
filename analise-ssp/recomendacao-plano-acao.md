@@ -47,3 +47,21 @@ Aqui usamos um escala de 1 a 5. 1 significa extrema pobreza no uso das práticas
 
 13. E pensando em segurança, o que o código fala para a gente?
     1. Não consegui ter algum resultado aqui, pois precisava compilar o SSP pra poder rodar as ferramentas :-(
+
+
+## Plano de ação para melhorar o nível técnico da equipe
+
+O plano de ação tenta priorizar o que parece ser a maior dor para que a equipe consiga produzir um código bom o suficiente para sustentar o produto da melhor maneira possível. Em primeiro lugar vamos ordenar o que entendemos ser necessário.
+
+1. A equipe precisa dominar mais os recursos mais básicos da linguagem Java, Spring e Hibernate. O básico bem treinado deve fazer com que o time entregue tudo com muito mais qualidade. **Java**: Aqui estamos falando de uso mais racional das abstrações disponíveis na própria linguagem como as coleções, tipo opcional e interfaces funcionais. **Spring**: Aqui a ideia é usar melhor os mecanismos de validação de entrada de dados, controle de exceptions, integrações com libs que facilitam o trabalho como o Feign. **Hibernate**: Aqui é praticar muito o controle do estado do objeto gerenciado pelo hibernate e ter total clareza do que está lidando. 
+
+2. Em segundo lugar o código apresenta práticas muito pobres de design. Aqui é necessário muita prática em cima da combinação clássica: Alta coesão e baixo aclopamento. Provavelmente a equipe carece de heurísticas mais refinadas para decidir onde os códigos vão viver. Também parece importante exercitar muito a prática de programação defensiva. Um meio de custo baixo e de impacto interessante quando falamos em aumentar a confiabilidade de execução. Para fechar é necessário praticar muita refatoração. Aparentemente essa não é uma prática regular na equipe. 
+
+3. Ainda sobre aspectos básicos de qualidade. Os testes não cumprem o papel que deveriam. A falta de asserts e de cobertura considerando as branches do código não ajuda nem na confiança para refatorar e testar o código pós correções de bugs e evoluções assim como não ajuda a revelar problemas o mais cedo possível. 
+
+4. Quando olhamos para privacidade parece que não existe qualquer ideia de como implementar os comportamentos esperados a nível de código. Aqui a ideia é partir do básico para, inicialmente, gerar consciência sobre o assunto. 
+
+5. Os pontos de integração do sistema não demonstram qualquer preocupação com resiliência. Não existe uma sistematização para lidar com estouros de tempo, problemas de conexão, retornos como erro etc. Este é um ponto onde o sistema está operando basicamente na sorte. Aqui parece necessário tanto um apuro teórico quanto muita prática para que essa preocupação seja padronizada. 
+
+
+
