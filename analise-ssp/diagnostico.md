@@ -132,6 +132,32 @@ StudentIntakeFormManager
 Aqui é mais um caso que fala sobre a falta do bom uso da orientação a objetos. Parece que a única maneira que o código encontra de alterar o estado dos objetos é utilizando os métodos padrões de acesso. Isso prejudica reuso de qualquer lógica, testes etc. 
 
 ```
+StudentIntakeFormManager
+
+		Person student = securityService.currentUser().getPerson();
+
+		// now refresh Person from Hibernate so lazy-loading works in case the
+		// person instance was loaded in a previous request
+		student = personService.get(student.getId());
+		
+		boolean completed = student.getStudentIntakeCompleteDate()== null ? false : true;
+			
+		formTO.setCompleted(completed);
+        if(!completed)
+        {
+        //blow away old data to be sure we have a tabula rasa
+        student.setDemographics(null);
+        student.setEducationGoal(null);
+        student.setEducationPlan(null);
+        student.getChallenges().clear();
+        student.getFundingSources().clear();
+        student.getEducationLevels().clear()
+
+```
+
+O código acima altera a referência para um objeto que foi criado em outro local da aplicação. Este tipo de prática complica demais a rastreabilidade da alteração no objeto em um fluxo de negócio. E se algum código, em outro lugar, no mesmo fluxo, também alterar?
+
+```
 StudentIntakeFormManagerTest
 
 		final FormTO form = formManager.create();
