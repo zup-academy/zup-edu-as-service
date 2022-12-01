@@ -73,7 +73,7 @@ A equipe precisa dominar mais os recursos mais básicos da linguagem Java, Sprin
 1. Como não temos treinamentos prontos sobre os recursos padrões da API do Java, podemos oferecer uma série de workshosp(3 ou mais) que conseguimos construir num prazo bem curto. Gostamos de usar 3 ou mais para que possamos trabalhar claramente uma progressão de dificuldade. 
 1. Também entendemos ser interessante uma outra série de workshops(3 ou mais) para praticarmos juntos todas as habilidades em conjunto. Aqui é mais uma oportunidade de avaliarmos o nível da equipe e também de trazer mais componentes como pressão, requisitos mal descritos etc. 
 
-### Melhoria nas práticas de design de código
+## Melhoria nas práticas de design de código
 
 Em segundo lugar o código apresenta práticas muito pobres de design. Aqui é necessário muita prática em cima da combinação clássica: Alta coesão e baixo aclopamento. Provavelmente a equipe carece de heurísticas mais refinadas para decidir onde os códigos vão viver. Também parece importante exercitar muito a prática de programação defensiva. Um meio de custo baixo e de impacto interessante quando falamos em aumentar a confiabilidade de execução. Para fechar é necessário praticar muita refatoração. Aparentemente essa não é uma prática regular na equipe. 
 
@@ -108,7 +108,7 @@ Os pontos de integração do sistema não demonstram qualquer preocupação com 
 
 1. Três ou mais workshops focados exclusivamente em construir uma sistematização para trazer resiliência para as aplicações. O conceito de resiliência não é complicado, o problema é ter repertório para as múltiplas situações que podem aparecer. É isso que vamos atacar. 
 
-### Documentação como cidadã de primeiro nível. 
+## Documentação como cidadã de primeiro nível. 
 
 O código carece demais de documentação. Este é um tema controverso e muitos times, até por conta de uma linha de argumentação de referências na comunidade, consideram que este não é um tema prioritário. Nós, por outro lado, entendemos que documentação pode ser um fator de aumento de produtividade muito interessante. A ideia é trabalhar quais tipos de documentação podem ser escritas e exercitar muito isso em cima da base de código que já existe. 
 
