@@ -80,3 +80,109 @@ Linha 96 - EarlyAlertManager
 ```
 
 Aqui tem uma chamada remota dentro de um loop. Tende a penalizar a performance da execução. Outro ponto interessante é que não realiza nenhum tratamento de erro relativo a eventuais problemas na chamada remota, o que diminui a resiliência da aplicação. 
+
+```
+StudentIntakeFormManager
+
+Aqui temos um acoplamento lá em cima com outras classes do próprio sistema. Isso fala sobre divisão de responsabilidades e controle de complexidade com o passar do tempo do projeto. Mesmo vendo a classe crescendo, pq ela continuou crescendo desse jeito? E é uma classe muito conectada com uma classe com uma tela, o que gera outra preocupação? Tela complexa vai gerar um backend complexo sempre? 
+
+```
+
+```
+StudentIntakeFormManager
+
+Aqui temos um acoplamento lá em cima com outras classes do próprio sistema. Isso fala sobre divisão de responsabilidades e controle de complexidade com o passar do tempo do projeto. Mesmo vendo a classe crescendo, pq ela continuou crescendo desse jeito? E é uma classe muito conectada com uma classe com uma tela, o que gera outra preocupação? Tela complexa vai gerar um backend complexo sempre? 
+
+```
+
+```
+StudentIntakeFormManager
+
+		final FormSectionTO confidentialitySection = buildConfidentialitySection();
+		if (null != confidentialitySection) {
+			formSections.add(confidentialitySection);
+		}
+
+```
+
+Mais um exemplo de mal uso do recurso padrão da linguagem. Pq não usou optional?
+
+```
+StudentIntakeFormManager
+
+    boolean completed = student.getStudentIntakeCompleteDate()== null ? false : true;
+
+```
+
+Mais um caso que a lógica poderia ter ficado dentro do método. O problema da falta de encapsulamento é que isso deixa o teste mais 
+trabalhoso, aumenta as chances de duplicação de código etc. 
+
+```
+StudentIntakeFormManager
+
+        student.setDemographics(null);
+        student.setEducationGoal(null);
+        student.setEducationPlan(null);
+        student.getChallenges().clear();
+        student.getFundingSources().clear();
+        student.getEducationLevels().clear();         	
+
+```
+
+Aqui é mais um caso que fala sobre a falta do bom uso da orientação a objetos. Parece que a única maneira que o código encontra de alterar o estado dos objetos é utilizando os métodos padrões de acesso. Isso prejudica reuso de qualquer lógica, testes etc. 
+
+```
+StudentIntakeFormManagerTest
+
+		final FormTO form = formManager.create();
+
+		assertNotNull("Form should not have been null.", form);
+
+		final FormSectionTO section = form
+				.getFormSectionById(StudentIntakeFormManager.SECTION_CONFIDENTIALITY_ID);
+
+		assertNotNull("Confidentiality section should not have been null.",
+				section);
+
+		assertEquals("Confidentiality section id does not match.",
+				StudentIntakeFormManager.SECTION_CONFIDENTIALITY_ID,
+				section.getId());
+```
+
+A ideia de um teste automatizado é que ele revele problemas o mais cedo possível. O teste acima não segue essa ideia. As asserções não verificam completamente o estado interno do objeto o que diminui em muito a chance de revelar algum bug. Como vai saber se o objeto está 
+montado corretamente em função do retorno do método ```create```?
+
+```
+
+StudentIntakeFormManagerTest
+
+		// Assert
+		final Set<PersonConfidentialityDisclosureAgreement> agreements = person
+				.getConfidentialityDisclosureAgreements();
+		assertNotNull("Person agreements should not have been null.",
+				agreements);
+		assertFalse("Person should have some accepted agreements.",
+				agreements.isEmpty());
+```
+
+Aqui a gente tem a mesma característica. Quantos agreements deveriam ser retornados? Este teste indica que pode ser 1 ou mais... Dado que existe um completo controle sobre o fluxo, o número esperado deveria ser verificado. 
+
+```
+
+Sobre cobertura
+
+```
+
+Por conta da complexidade do código, percebe-se uma tendência a realizar os testes sempre integrados. Por um lado deixa mais perto da execução real, por outro deixa tudo mais lento por conta da utilização recorrente do banco de dados, setup de dados, limpeza etc. 
+Outro detalhe é que por exemplo o teste relativo a classe ```StudentIntakeFormManager``` não verifica o funcionamento do método ```populate```, que é o método, olhando pelas métricas, mais complexo que se tem na classe. Isso também indica a pobreza de cobertura de qualidade. 
+
+```
+
+Sobre testabilidade
+
+```
+
+O código não apresenta nenhuma preocupação em facilitar os testes. Nem do ponto de vista do código de produção e também nem do ponto de vista de infraestrutura de testes em si. 
+
+
+
