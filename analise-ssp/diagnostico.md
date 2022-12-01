@@ -1,17 +1,17 @@
 ## Criterios
 
-1. O quão bem o código utiliza as apis disponíveis na linguagem padrão
-2. O quão bem o código utiliza os recursos disponíveis nas tecnologias da stack escolhida em cima daquela tecnologia
-3. Quais são as heurísticas demonstradas pelo código para a construção de novas abstrações(independente do motivo da abstração aqui)
-4. O quão revelador de bugs aquele código tenta ser
-5. Os testes automatizados de fato utilizam as melhores técnicas de modo a potencializar a revelação de bugs e, consequentemente, aumentar o nível de confiabilidade do código?
-6. Como estão as práticas de refatoração no código? Ela é feita em algum momento? Nunca é feita?
+1. O quão bem o código utiliza os recursos disponíveis nas tecnologias da stack escolhida em cima daquela tecnologia
+1. Nível de refinamento das heurísticas para tomada de decisão sobre detalhes do design do código
+1. O quão revelador de bugs aquele código é.
+1. Os testes automatizados de fato utilizam as melhores técnicas de modo a potencializar a revelação de bugs e, consequentemente, aumentar o nível de confiabilidade do código.
+1. O código demonstra que práticas de refatoração são executadas regularmente. 
+1. Nível de saúde quando olhamos para as métricas que servem de proxy para a qualidade do código como LOC, Coesão, Acoplamento entre outras.
 7. Quando olhamos para as métricas que servem de proxy para a qualidade do código como LOC, Coesão, Acoplamento entre outras, o que elas nos dizem?
-8. Considerando diversas combinações de métricas derivadas do CDD, o quão fácil está de entender?
-9. Quais são os sinais que o código dá sobre o mínimo de preocupação com performance e escalabilidade(talvez nem seja necessário dado o contexto do software, como é o caso da Handora)
-10. Olhando para documentação dentro do próprio código + repo em geral, como está a qualidade?
-11. Pensando em LGPD e privacidade no geral, o código demonstra preocupação com isso?
-12. E pensando em segurança, o que o código fala para a gente?
+8. Nível de facilidade de entendimento
+9. Nível de preocupação do código com performance,escalabilidade e resiliência
+10. Qualidade da documentação
+11. O código demonstra a preocupação necessária com privacidade de dados.
+12. Nível de aplicação de práticas de segurança como cidadã de primeiro nível(Security by design)
 
 ## Possíveis evidências
 
